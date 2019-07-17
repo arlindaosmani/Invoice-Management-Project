@@ -67,7 +67,7 @@ public class InvoiceReader{
             }
             else{
                 produktet[i]=inputi;}
-            String cmimi=JOptionPane.showInputDialog("Shkruaj cmimin(€) e produktit "+ produktet[i]);
+            String cmimi=JOptionPane.showInputDialog("Shkruaj cmimin(â‚¬) e produktit "+ produktet[i]);
             if(cmimi==null || cmimi.equals("")){
                 cmimet[i]=0.0;}
             else{
@@ -95,11 +95,8 @@ public int howmany(){
                               this.totali=totali;
                               this.Finaltotali=Finaltotali;
                             totali =  (cmimet[gt]*sasia)+ totali;
-                            //  System.out.println("____");
-                            //  System.out.print("Totali= "+cmimet[gt]+" x " + sasia+ " = "+format.format(totali));
-                             totaliTvsh= (totali*0.18)+totali;
-                            //  System.out.println("  Totali me tvsh "+format.format(totaliTvsh));
-                             Finaltotali= totaliTvsh;
+                            totaliTvsh= (totali*0.18)+totali;
+                           Finaltotali= totaliTvsh;
                               i=new Integer(JOptionPane.showInputDialog("Shkruaj numrin e artikullit")).intValue();
 
 g.drawString("                                                           "+ sasia+" x "+ cmimet[gt]+"       "+format.format((cmimet[gt]*sasia)), w, 110+increment*i);
